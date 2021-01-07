@@ -15,7 +15,7 @@ int main(){
     }
     
     //punto 3
-    printf("%d",arr1[7]);
+    printf("%c\n",arr1[7]);
 
     //punto 4
     int arr2[n2];
@@ -24,17 +24,20 @@ int main(){
 
     //punto 5
     printf("¿Que valor quieres para el elemento [4]?");
-    scanf("%d",arr2[4]);
+    scanf("%d",&arr2[4]);
 
     //punto 6
     float arr3[100];
-
+    float *p;
+    float resultado = 0;
+    p = &arr3[0];
+    //p += 100;
     //punto 7
-    for(int i = 0; i < 100; i++){
-        arr3[i] = random() % 100;
+    for(int i = 1; i < 100; i++){
+        arr3[i] = random() % 10;
+        //p = &arr3[i];
+        resultado += p[i];
     }
 
-    //punto 8
-    float suma;
-     
+    printf("%f",resultado);
 }
